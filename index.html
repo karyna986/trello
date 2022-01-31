@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="app">
+          <!-- trello__title -->
+        <div class="trello__title">
+            <div class="trello__title_name">
+                <div  class="title--select">
+                    <i onclick="hideBoards()" class="fa fas fa-calendar"></i>
+                    <i onclick="showBoards()" class="fa fas fa-file"></i>
+                </div>
+                    <!-- <select onchange="hideBoards()">
+                        <option value="board">board</option>
+                        <option value="calendar">calendar</option>
+                      </select> -->
+                <h1 contenteditable="true" class="title" > Project </h1>
+                <div class="add--board">+</div>
+            </div>
+                
+            <div class="icons">
+                <div class="title--icons"></div> 
+                <div class="add_icons"> <p>...</p> </div> 
+                <div class="icons__item">
+                    <div class="user_top">
+                        <h1> Users </h1> 
+                        <div onclick="closeUser()" class="close_users">x</div>
+                    </div>
+                    <div class="add_users">add_user</div>
+                    </div>
+                </div>
+
+            <div onclick="setingsFilter()" class="title_filter">
+                <i class="fa fa-sliders"></i>  Filter
+            </div>
+                <div class="filter_all"></div>
+
+
+            <div onclick="styleOpen()" class="settings__item">
+                <i class="fa fa-gear"></i> Settings
+            </div>
+        </div>
+
+<!-- boards -->
+
+        <div class="boards">  </div>
+
+<!-- calendar -->
+        <div class="calendar">
+            <div class="month">
+                <i class="fa fa-angle-left prev"></i>
+            <div class="date">
+                <h1></h1>
+                <p></p>
+            </div>
+                <i class="fa fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"></div>
+        </div>
+
+  <!-- settings__background -->
+        <div class="general-settings">
+            <div onclick="styleClose()" class="close_settings" >X</div>
+            <h1> 1. Change Background</h1>
+            <div class="settings__background">
+                <div class="background-color">
+                    <div onclick="styleBgr1()" class="red"></div>
+                    <div onclick="styleBgr2()" class="green"></div>
+                    <div onclick="styleBgr3()" class="black"></div>
+                    <div onclick="styleBgr4()" class="blue"></div>
+                    <div onclick="styleBgr5()" class="pink"></div>
+                    <div onclick="styleBgr6()" class="orange"></div>
+                </div>
+                <div class="background-img">
+                    <img onclick="styleImg1()" id="photo_1" src="./img/1.jpg" alt="">
+                    <img onclick="styleImg2()" id="photo_2" src="./img/2.jpg" alt="">
+                    <img onclick="styleImg3()" id="photo_3" src="./img/3.jpg" alt="">
+                    <img onclick="styleImg4()" id="photo_4" src="./img/4.jpg" alt="">
+                    <img onclick="styleImg5()" id="photo_5" src="./img/5.jpg" alt="">
+                </div>
+            </div>
+            <h1> 2. New tags</h1>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./icons.js"></script>
+    <script src="./background.js"></script>
+    <script src="./calendar.js"></script>
+
+</body>
+</html>
